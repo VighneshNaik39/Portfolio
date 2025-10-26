@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root{
+  --bg:#1e1e2f;
+  --text:#e0e0e0;
+  --accent-gradient: linear-gradient(90deg,#00bfff,#9b59b6);
+  --btn-bg:#00bfff;
+  --btn-hover:#9b59b6;
+  --btn-outline:#9b59b6;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins',sans-serif;background: var(--bg);color: var(--text);line-height:1.6;}
+.container{width:90%;max-width:1200px;margin:0 auto;}
+
+/* HEADER */
+header{background:#252538;padding:1rem 0;}
+header .logo{font-weight:600;font-size:1.5rem;display:inline-block;}
+header nav{display:inline-block;float:right;}
+header ul{list-style:none;display:flex;gap:2rem;}
+header ul li a{color: var(--text);text-decoration:none;font-weight:500;transition:0.3s;}
+header ul li a:hover, header ul li a.active{
+  background: var(--accent-gradient);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;color:transparent;
+}
+
+/* GRADIENT TEXT */
+.gradient-text{
+  background: var(--accent-gradient);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  color:transparent;
+}
+
+/* HERO */
+.hero{padding:6rem 0;display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap;}
+.hero-content{display:flex;flex-wrap:wrap;gap:3rem;align-items:center;width:100%;justify-content:space-between;}
+.hero-text{max-width:600px;}
+.hero-text p{margin:1rem 0;font-size:1.1rem;}
+.hero-buttons a{margin-right:1rem;text-decoration:none;padding:0.8rem 2rem;border-radius:30px;font-weight:600;transition:0.3s;}
+.hero-buttons .btn{background: var(--btn-bg);color:#000;}
+.hero-buttons .btn:hover{background: var(--btn-hover);color:#fff;}
+.hero-buttons .btn-outline{background:transparent;border:2px solid var(--btn-outline);color:#fff;}
+.hero-buttons .btn-outline:hover{background: var(--btn-outline);color:#000;}
+
+/* HERO IMAGE FRAME */
+.hero-img-container{flex:1 1 300px;display:flex;justify-content:center;align-items:center;}
+.hero-img-frame {
+  background: #252538;          /* frame background */
+  padding: 10px;                /* space around the image */
+  border-radius: 15px;          /* rounded rectangle corners */
+  box-shadow: 0 0 20px #00bfff, 0 0 40px #9b59b6, 0 0 60px #00bfff; /* neon glow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-img-frame img {
+  width: 350px;                 /* rectangle width */
+  max-width: 100%;              /* responsive */
+  border-radius: 15px;          /* rounded rectangle corners */
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.hero-img-frame:hover img {
+  transform: scale(1.05);
+}
+
+.hero-img-frame:hover {
+  box-shadow: 0 0 25px #00bfff, 0 0 50px #9b59b6, 0 0 75px #00bfff;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .hero-img-frame img {
+    width: 250px;
+  }
+}
+
+/* SECTIONS */
+section{padding:4rem 0;}
+.about-preview,.skills-section,.projects-preview,.contact-cta{
+  background:#252538;border-radius:15px;padding:2rem;box-shadow:0 10px 25px rgba(0,0,0,0.5);margin-bottom:3rem;
+}
+
+/* SKILLS */
+.skills-grid{display:flex;flex-wrap:wrap;gap:1rem;}
+.skill-card{background:#1b1b2c;padding:1rem 1.5rem;border-radius:10px;flex:1 1 200px;text-align:center;transition:0.3s;}
+.skill-card:hover{background:#00bfff;color:#000;}
+
+/* PROJECTS */
+.projects-grid{display:flex;flex-wrap:wrap;gap:1.5rem;}
+.project-card{background:#1b1b2c;padding:1.5rem;border-radius:10px;flex:1 1 300px;transition:0.3s;}
+.project-card:hover{transform:translateY(-5px);box-shadow:0 8px 20px rgba(0,0,0,0.5);}
+
+/* BUTTONS */
+.btn{margin-top:1rem;display:inline-block;text-decoration:none;background: var(--btn-bg);padding:0.8rem 2rem;border-radius:30px;color:#000;font-weight:600;transition:0.3s;}
+.btn:hover{background: var(--btn-hover);color:#fff;}
+
+/* FOOTER */
+footer{padding:2rem 0;text-align:center;color:#777;background:#252538;}
+
+/* MOBILE */
+@media screen and (max-width:768px){
+  .hero-content{flex-direction:column;align-items:center;text-align:center;}
+  .hero-text{max-width:100%;}
+  .hero-buttons a{margin-bottom:1rem;}
+  .hero-img-frame img{width:200px;}
+}

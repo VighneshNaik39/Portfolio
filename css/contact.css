@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root{
+  --bg:#1e1e2f;
+  --text:#e0e0e0;
+  --accent-gradient: linear-gradient(90deg,#00bfff,#9b59b6);
+  --btn-bg:#00bfff;
+  --btn-hover:#9b59b6;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins',sans-serif;background: var(--bg);color: var(--text);line-height:1.6;}
+.container{width:90%;max-width:1200px;margin:0 auto;}
+
+/* HEADER */
+header{background:#252538;padding:1rem 0;}
+header .container{display:flex;justify-content:space-between;align-items:center;}
+header .logo{font-weight:600;font-size:1.5rem;}
+header nav ul{list-style:none;display:flex;gap:2rem;}
+header nav ul li a{color: var(--text);text-decoration:none;font-weight:500;transition:0.3s;}
+header nav ul li a:hover, header nav ul li a.active{
+  background: var(--accent-gradient);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;color:transparent;
+}
+
+/* GRADIENT TEXT */
+.gradient-text{
+  background: var(--accent-gradient);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;color:transparent;
+}
+
+/* CONTACT PAGE */
+.contact-page{padding:4rem 0;}
+.contact-content p{margin:1rem 0;}
+.contact-grid{display:flex;gap:3rem;flex-wrap:wrap;}
+.contact-form{flex:1 1 400px;background:#252538;padding:2rem;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,0.5);}
+.contact-form form{display:flex;flex-direction:column;gap:1rem;}
+.contact-form label{font-weight:500;}
+.contact-form input,
+.contact-form textarea{
+  padding:0.8rem;
+  border-radius:10px;
+  border:none;
+  background:#1b1b2c;
+  color:#e0e0e0;
+  resize:none;
+  transition:0.3s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus{
+  outline:none;
+  box-shadow:0 0 10px #00bfff,0 0 20px #9b59b6;
+}
+.contact-form .btn{
+  margin-top:1rem;
+  padding:0.8rem 2rem;
+  border-radius:30px;
+  border:none;
+  font-weight:600;
+  background: var(--btn-bg);
+  color:#000;
+  cursor:pointer;
+  transition:0.3s;
+}
+.contact-form .btn:hover{
+  background: var(--btn-hover);
+  color:#fff;
+}
+
+/* CONTACT INFO */
+.contact-info{flex:1 1 300px;background:#252538;padding:2rem;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,0.5);}
+.contact-info p{margin:1rem 0;}
+
+/* FOOTER */
+footer{padding:2rem 0;text-align:center;color:#777;background:#252538;}
+
+/* MOBILE */
+@media screen and (max-width:768px){
+  .contact-grid{flex-direction:column;}
+}

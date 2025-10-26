@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root{
+  --bg:#1e1e2f;
+  --text:#e0e0e0;
+  --accent-gradient: linear-gradient(90deg,#00bfff,#9b59b6);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins',sans-serif;background: var(--bg);color: var(--text);line-height:1.6;}
+.container{width:90%;max-width:1200px;margin:0 auto;}
+
+/* HEADER */
+header{background:#252538;padding:1rem 0;}
+header .container{display:flex;justify-content:space-between;align-items:center;}
+header .logo{font-weight:600;font-size:1.5rem;}
+header nav ul{list-style:none;display:flex;gap:2rem;}
+header nav ul li a{color: var(--text);text-decoration:none;font-weight:500;transition:0.3s;}
+header nav ul li a:hover, header nav ul li a.active{
+  background: var(--accent-gradient);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;color:transparent;
+}
+
+/* GRADIENT TEXT */
+.gradient-text{
+  background: var(--accent-gradient);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;color:transparent;
+}
+
+/* PROJECTS PAGE */
+.projects-page{padding:4rem 0;}
+.projects-page h1{margin-bottom:2rem;}
+.projects-grid{display:flex;flex-wrap:wrap;gap:1.5rem;}
+.project-card{
+  background:#252538;
+  padding:1.5rem;
+  border-radius:15px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.5);
+  flex:1 1 300px;
+  transition:0.3s;
+}
+.project-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 8px 20px rgba(0,0,0,0.6);
+}
+
+/* FOOTER */
+footer{padding:2rem 0;text-align:center;color:#777;background:#252538;}
+
+/* MOBILE */
+@media screen and (max-width:768px){
+  .projects-grid{flex-direction:column;}
+}
